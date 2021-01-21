@@ -5,7 +5,7 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static unsigned int borderpx  = 4;        /* border pixel of windows */
+static unsigned int borderpx  = 2;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static unsigned int gappih    = 8;       /* horiz inner gap between windows */
 static unsigned int gappiv    = 8;       /* vert inner gap between windows */
@@ -16,12 +16,12 @@ static int smartgaps          = 1;        /* 1 means no outer gap when there is 
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static char *fonts[]          = { "monospace:size=16", "JoyPixels:pixelsize=16:antialias=true:autohint=true"  };
-static char normbgcolor[]           = "#2e3440";
-static char normbordercolor[]       = "#2e3440";
-static char normfgcolor[]           = "#d8dee9";
-static char selfgcolor[]            = "#eceff4";
-static char selbordercolor[]        = "#bf616a";
-static char selbgcolor[]            = "#5e81ac";
+static char normbgcolor[]           = "#1d2021";
+static char normbordercolor[]       = "#1d2021";
+static char normfgcolor[]           = "#ebdbb2";
+static char selfgcolor[]            = "#fbf1c7";
+static char selbordercolor[]        = "#fb4934";
+static char selbgcolor[]            = "#458588";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },

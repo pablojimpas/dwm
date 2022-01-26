@@ -210,12 +210,12 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
 	/* { MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_c,		spawn,		SHCMD("$BROWSER https://web.telegram.org/") },
-	{ MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("$BROWSER https://discord.com/app") },
+	{ MODKEY,			XK_c,		spawn,		SHCMD("favtxt-sc") },
+	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
-	{ MODKEY,			XK_b,		spawn,		SHCMD("bmtxt-all") },
+	{ MODKEY,			XK_b,		spawn,		SHCMD("favtxt-all") },
 	{ MODKEY|ShiftMask,		XK_b,		togglebar,	{0} },
-	{ MODKEY,			XK_n,		spawn,		SHCMD("bmtxt-nav") },
+	{ MODKEY,			XK_n,		spawn,		SHCMD("favtxt-nav") },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
@@ -317,7 +317,7 @@ static Button buttons[] = {
 	{ ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
 	{ ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
 #endif
-	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/.local/src/dwmblocks/config.h") },
+	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e $EDITOR ~/.local/src/dwmblocks/config.h") },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        defaultgaps,	{0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },

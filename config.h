@@ -50,8 +50,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	*/
 	/* class    instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
-	{ NULL,     NULL,       "Discord",       	    1 << 8,       0,           0,         0,        -1 },
-	{ NULL,     NULL,       "Telegram",       	    1 << 8,       0,           0,         0,        -1 },
 	{ "Gimp",     NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
 	{ TERMCLASS,  NULL,       NULL,       	    0,            0,           1,         0,        -1 },
 	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
@@ -212,8 +210,8 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
 	/* { MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_c,		spawn,		SHCMD("telegram-desktop") },
-	{ MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("discord") },
+	{ MODKEY,			XK_c,		spawn,		SHCMD("$BROWSER https://web.telegram.org/") },
+	{ MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("$BROWSER https://discord.com/app") },
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		spawn,		SHCMD("bmtxt-all") },
 	{ MODKEY|ShiftMask,		XK_b,		togglebar,	{0} },

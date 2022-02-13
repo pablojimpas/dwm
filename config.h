@@ -216,7 +216,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_b,		spawn,		SHCMD("favtxt-all") },
 	{ MODKEY|ShiftMask,		XK_b,		togglebar,	{0} },
 	{ MODKEY,			XK_n,		spawn,		SHCMD("favtxt-nav") },
-	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
+	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e sfeed_curses ~/.sfeed/feeds/* & newsup") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") },

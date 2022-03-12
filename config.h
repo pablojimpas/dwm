@@ -154,7 +154,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_plus,	spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask,		XK_plus,	spawn,		SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_BackSpace,	spawn,		SHCMD("sysact") },
-	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,		SHCMD("sysact") },
+	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,		SHCMD("tmux-tfg") },
 
 	{ MODKEY,			XK_Tab,		view,		{0} },
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn,		SHCMD("") }, */

@@ -18,12 +18,12 @@ static int smartgaps          = 1;	/* 1 means no outer gap when there is only on
 static int showbar            = 1;	/* 0 means no bar */
 static int topbar             = 1;	/* 0 means bottom bar */
 static char *fonts[]          = { "monospace:size=12", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
-static char normbgcolor[]           = "#2e3440";
-static char normbordercolor[]       = "#2e3440";
-static char normfgcolor[]           = "#e5e9f0";
-static char selfgcolor[]            = "#eceff4";
-static char selbordercolor[]        = "#bf616a";
-static char selbgcolor[]            = "#5e81ac";
+static char normbgcolor[]           = "#1d2021";
+static char normbordercolor[]       = "#1d2021";
+static char normfgcolor[]           = "#ebdbb2";
+static char selfgcolor[]            = "#fbf1c7";
+static char selbordercolor[]        = "#fb4934";
+static char selbgcolor[]            = "#458588";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },

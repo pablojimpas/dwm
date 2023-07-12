@@ -37,10 +37,12 @@ typedef struct {
 } Sp;
 const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd3[] = {TERMINAL, "-n", "spmemo", "-f", "monospace:size=14", "-g", "120x40", "-e", "memo", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
 	{"spcalc",      spcmd2},
+	{"spmemo",      spcmd3},
 };
 
 /* tagging */
@@ -59,6 +61,7 @@ static const Rule rules[] = {
 	{ TERMCLASS,      "bg",        NULL,       	    1 << 7,       0,           1,         0,        -1 },
 	{ TERMCLASS,      "spterm",    NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
 	{ TERMCLASS,      "spcalc",    NULL,       	    SPTAG(1),     1,           1,         0,        -1 },
+	{ TERMCLASS,      "spmemo",    NULL,       	    SPTAG(2),     1,           1,         0,        -1 },
 };
 
 /* layout(s) */
@@ -208,6 +211,7 @@ static const Key keys[] = {
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
 	{ MODKEY|ShiftMask,		XK_apostrophe,	togglesmartgaps,	{0} },
+	{ MODKEY,			XK_exclamdown,	togglescratch,	{.ui = 2} },
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
 	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
 
